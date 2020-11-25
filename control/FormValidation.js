@@ -25,6 +25,8 @@ var formValid = false;
             if (form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
+              formValid = false;
+              showResult();
             } else if (form.checkValidity() == true) {
               event.preventDefault();
               $("#success").modal("show");
@@ -46,6 +48,8 @@ function showResult() {
   if (formValid == true) {
     calculate();
     priceResult.classList.remove("display-none");
+  } else {
+    priceResult.classList.add("display-none");
   }
 }
 
