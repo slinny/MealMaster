@@ -1,6 +1,6 @@
 1. Button
 plan.html
-line 320-326
+line 271-279
 
 2. Card
 menu.html
@@ -20,12 +20,12 @@ line 30-40
 plan.html
 line 30-40
 
-shop.html
+experience.html
 line 30-40
 
 5. Form
 plan.html
-line 91-327
+line 91-280
 
 6. NavBar 
 index.html
@@ -37,6 +37,6 @@ line 28-60
 plan.html
 line 28-60
 
-shop.html
+experience.html
 line 28-60
 
