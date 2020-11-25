@@ -52,3 +52,30 @@ code {
     grid-gap: 0.5rem;
     margin-bottom: 2em;
 }
+
+.display-none {
+    display: none;
+}
+
+table.pricing {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+table.pricing .price {
+    text-align: right;
+}
+
+table.pricing tr:last-child {
+    border-top: thin solid;
+}
+
+#price-result {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: solid;
+    padding: 1em;
+    width: 50%;
+}
