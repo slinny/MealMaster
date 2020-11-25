@@ -92,7 +92,14 @@
           <p><b>Choose your plan and make an order</b></p>
 
           <div class="mb-3">
-            <label for="myPlanNumber">Plan No.</label>
+            <label for="myDate"
+              >Start Date: (Must be at least three days from today)</label
+            >
+            <input type="date" class="form-control" id="myDate" name="myDate" />
+          </div>
+
+          <div class="mb-3">
+            <label for="myPlanNumber">* Plan No.</label>
             <input
               type="number"
               id="myPlanNumber"
@@ -107,7 +114,7 @@
 
           <div class="mb-3">
             <label for="myCount"
-              >Plan Count (how many plans do you want to order at one
+              >* Plan Count (how many plans do you want to order at one
               time)</label
             >
             <input
@@ -121,11 +128,10 @@
             />
             <div class="invalid-feedback">Please made a choice.</div>
           </div>
-
           <p><b>Address</b></p>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="firstName">First name</label>
+              <label for="firstName">* First name</label>
               <input
                 type="text"
                 class="form-control"
@@ -137,7 +143,7 @@
               <div class="invalid-feedback">Valid first name is required.</div>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="lastName">Last name</label>
+              <label for="lastName">* Last name</label>
               <input
                 type="text"
                 class="form-control"
@@ -163,7 +169,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="address">Address</label>
+            <label for="address">* Address</label>
             <input
               type="text"
               class="form-control"
@@ -190,7 +196,7 @@
 
           <div class="row">
             <div class="col-md-5 mb-3">
-              <label for="city">City</label>
+              <label for="city">* City</label>
               <input
                 type="text"
                 class="form-control"
@@ -201,7 +207,7 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <label for="state">State</label>
+              <label for="state">* State</label>
               <select class="custom-select d-block w-100" id="state" required>
                 <option value="">Choose...</option>
               </select>
@@ -209,7 +215,7 @@
             </div>
 
             <div class="col-md-3 mb-3">
-              <label for="zip">Zip</label>
+              <label for="zip">* Zip</label>
               <input
                 type="text"
                 class="form-control"
@@ -220,8 +226,8 @@
               <div class="invalid-feedback">Zip code required.</div>
             </div>
           </div>
-
-          <p><b>Shipping Method</b></p>
+          <hr class="mb-4" />
+          <p><b>* Shipping Method</b></p>
 
           <div class="d-block my-3">
             <div class="custom-control custom-radio">
@@ -252,7 +258,6 @@
               >
             </div>
           </div>
-
           <hr class="mb-4" />
           <div class="custom-control custom-checkbox">
             <input
@@ -265,8 +270,6 @@
             >
           </div>
           <hr class="mb-4" />
-
-          <hr class="mb-4" />
           <button
             class="btn btn-primary btn-lg btn-block"
             type="submit"
@@ -276,6 +279,7 @@
           </button>
         </form>
 
+        <hr class="mb-4" />
         <div id="price-result" class="display-none">
           <table class="pricing">
             <tr>
@@ -319,6 +323,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./control/FormValidation.js"></script>
-    <script src = "./control//StateName.js"></script>
+    <script src="./control//StateName.js"></script>
   </body>
 </html>

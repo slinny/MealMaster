@@ -1,3 +1,17 @@
+var mydate = new Date();
+mydate.setDate(mydate.getDate() + 3);
+
+var day = mydate.getDate();
+var month = ("0" + (mydate.getMonth() + 1)).slice(-2);
+var year = mydate.getFullYear();
+
+var fullDate = year + "-" + month + "-" + day;
+
+var myDatePicker = document.getElementById("myDate");
+myDatePicker.setAttribute("min", fullDate);
+
+var formValid = false;
+
 (function () {
   "use strict";
   window.addEventListener(
@@ -67,8 +81,6 @@ function calculate() {
   }
 
   let cost = mealCost * planCount * orderCount;
-
-  cost = cost * numGuests * numNights;
   priceElement.innerHTML = "$" + cost.toFixed(2);
   taxElement.innerHTML = "$" + (cost * 0.06).toFixed(2);
   totalElement.innerHTML = "$" + (cost * 1.06).toFixed(2);
