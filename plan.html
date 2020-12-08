@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Meal Master offers fresh and delicious meal prep kits at amazing prices!"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Meal Master</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
+
+  <body class="container">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Meal Master</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menus</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="plan.html">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experience.html">Experience</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h1>Our Plans</h1>
+      <p>$7 per meal. Order as many as 6 plans as one time.</p>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Four Week Plan</td>
+            <td>One meal each day for four weeks (28 meals)</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Twelve Week Everyday Plan</td>
+            <td>One meal each day for twelve weeks (84 meals)</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>One Week Everyday Plan</td>
+            <td>One meal for each day for one week (7 meals)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="col-md-8 order-md-1">
+        <form class="needs-validation" novalidate>
+          <p><b>Choose your plan and make an order</b></p>
+
+          <div class="mb-3">
+            <label for="myDate"
+              >Start Date: (Must be at least three days from today)</label
+            >
+            <input type="date" class="form-control" id="myDate" name="myDate" />
+          </div>
+
+          <div class="mb-3">
+            <label for="myPlanNumber">* Plan No.</label>
+            <input
+              type="number"
+              id="myPlanNumber"
+              name="myPlanNumber"
+              min="1"
+              max="3"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Please made a choice.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="myCount"
+              >* Plan Count (how many plans do you want to order at one
+              time)</label
+            >
+            <input
+              type="number"
+              id="myCount"
+              name="myCount"
+              min="1"
+              max="6"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Please made a choice.</div>
+          </div>
+          <p><b>Address</b></p>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">* First name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder=""
+                value=""
+                required
+              />
+              <div class="invalid-feedback">Valid first name is required.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">* Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder=""
+                value=""
+                required
+              />
+              <div class="invalid-feedback">Valid last name is required.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="myEmail">* Email:</label>
+            <input
+              class="form-control"
+              type="email"
+              id="myEmail"
+              name="myEmail"
+              required
+            />
+            <div class="invalid-feedback">Please enter your email address.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">* Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="street number and name"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter your shipping address.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address2"
+              >Address 2 <span class="text-muted">(Optional)</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="address2"
+              placeholder="Apartment or suite"
+            />
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="city">* City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                placeholder="city name"
+                required
+              />
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="state">* State</label>
+              <select class="custom-select d-block w-100" id="state" required>
+                <option value="">Choose...</option>
+              </select>
+              <div class="invalid-feedback">Please provide a valid state.</div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="zip">* Zip</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zip"
+                placeholder=""
+                required
+              />
+              <div class="invalid-feedback">Zip code required.</div>
+            </div>
+          </div>
+          <hr class="mb-4" />
+          <p><b>* Shipping Method</b></p>
+
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input
+                id="standard-shipping"
+                name="paymentMethod"
+                type="radio"
+                class="custom-control-input"
+                value="1"
+                checked
+                required
+              />
+              <label class="custom-control-label" for="standard-shipping"
+                >standard-shipping</label
+              >
+            </div>
+            <div class="custom-control custom-radio">
+              <input
+                id="signature-required"
+                name="paymentMethod"
+                type="radio"
+                value="2"
+                class="custom-control-input"
+                required
+              />
+              <label class="custom-control-label" for="signature-required"
+                >Signature Required (Extra $1 for each meal)</label
+              >
+            </div>
+          </div>
+          <hr class="mb-4" />
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="save-info"
+            />
+            <label class="custom-control-label" for="save-info"
+              >Save this information for next time</label
+            >
+          </div>
+          <hr class="mb-4" />
+          <button
+            class="btn btn-primary btn-lg btn-block"
+            type="submit"
+            id="price-button"
+          >
+            Submit Order
+          </button>
+        </form>
+
+        <hr class="mb-4" />
+        <div id="price-result" class="display-none">
+          <table class="pricing">
+            <tr>
+              <td>Total before tax:</td>
+              <td id="price-value" class="price"></td>
+            </tr>
+            <tr>
+              <td>Taxes and fees:</td>
+              <td id="taxes-value" class="price"></td>
+            </tr>
+            <tr>
+              <td>Total:</td>
+              <td id="total-value" class="price"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        ©2013 - 2020, Meal Master LLC. Meal Master is a meal delivery service
+        supplying weekly deliveries of fresh, perfectly portioned ingredients
+        and chef-designed recipes.<br />
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./control/FormValidation.js"></script>
+    <script src="./control//StateName.js"></script>
+  </body>
+</html>
